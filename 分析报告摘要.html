@@ -212,6 +212,15 @@
             color: white;
             font-weight: bold;
             transition: width 1s ease;
+            min-width: 60px;
+            position: relative;
+        }
+
+        .rating-bar-fill::after {
+            content: attr(data-percent);
+            position: absolute;
+            right: 10px;
+            white-space: nowrap;
         }
 
         .product-grid {
@@ -224,25 +233,40 @@
         .product-card {
             background: white;
             border: 2px solid #e9ecef;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 15px;
+            padding: 25px;
             transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .product-card:hover {
             border-color: #667eea;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+            transform: translateY(-3px);
         }
 
         .product-card h4 {
             color: #667eea;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
         }
 
         .product-card .rating {
-            font-size: 1.5em;
+            font-size: 1.6em;
             color: #ffc107;
-            margin: 10px 0;
+            margin: 12px 0;
+            font-weight: bold;
+        }
+
+        .product-card p {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        .product-card strong {
+            font-weight: 600;
         }
 
         @media (max-width: 768px) {
@@ -387,56 +411,82 @@
             </div>
 
             <div class="section">
-                <h2 class="section-title">🛍️ 产品表现排名</h2>
+                <h2 class="section-title">🛍️ 产品表现排名与优缺点分析</h2>
 
                 <div class="product-grid">
                     <div class="product-card">
                         <h4>🥇 Power Bank</h4>
                         <div class="rating">★★★★☆ 4.39</div>
-                        <p>评论数: 73条 (14.6%)</p>
+                        <p>评论数: 73条 (14.6%) | 好评率: 86.3%</p>
                         <p><strong>表现:</strong> 明星产品</p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 速度快 (23次)<br>2. 物有所值 (17次)<br>3. 小巧便携 (15次)</p>
+                        <p style="margin-top: 5px; color: #dc3545;"><strong>⚠️ 主要缺点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 停止工作 (1次)</p>
                     </div>
 
                     <div class="product-card">
                         <h4>🥇 3D Printer</h4>
                         <div class="rating">★★★★☆ 4.39</div>
-                        <p>评论数: 57条 (11.4%)</p>
+                        <p>评论数: 57条 (11.4%) | 好评率: 82.5%</p>
                         <p><strong>表现:</strong> 明星产品</p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 质量优秀 (28次)<br>2. 卓越性能 (18次)<br>3. 推荐 (17次)</p>
+                        <p style="margin-top: 5px; color: #28a745;"><strong>✨ 暂无明显问题</strong></p>
                     </div>
 
                     <div class="product-card">
                         <h4>🎵 Audio</h4>
                         <div class="rating">★★★★☆ 4.35</div>
-                        <p>评论数: 80条 (16.0%)</p>
+                        <p>评论数: 80条 (16.0%) | 好评率: 83.8%</p>
                         <p><strong>表现:</strong> 良好</p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 质量优秀 (33次)<br>2. 表现优异 (23次)<br>3. 卓越性能 (21次)</p>
+                        <p style="margin-top: 5px; color: #dc3545;"><strong>⚠️ 主要缺点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 性能弱 (1次)</p>
                     </div>
 
                     <div class="product-card">
                         <h4>📽️ Projector</h4>
                         <div class="rating">★★★★☆ 4.32</div>
-                        <p>评论数: 75条 (15.0%)</p>
+                        <p>评论数: 75条 (15.0%) | 好评率: 80.0%</p>
                         <p><strong>表现:</strong> 良好</p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 表现优异 (25次)<br>2. 质量优秀 (22次)<br>3. 完美体验 (22次)</p>
+                        <p style="margin-top: 5px; color: #28a745;"><strong>✨ 暂无明显问题</strong></p>
                     </div>
 
                     <div class="product-card">
                         <h4>🔌 Charger</h4>
                         <div class="rating">★★★★☆ 4.25</div>
-                        <p>评论数: 70条 (14.0%)</p>
+                        <p>评论数: 70条 (14.0%) | 好评率: 78.6%</p>
                         <p><strong>表现:</strong> 良好</p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 小巧便携 (21次)<br>2. 速度快 (15次)<br>3. 推荐 (14次)</p>
+                        <p style="margin-top: 5px; color: #dc3545;"><strong>⚠️ 主要缺点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 停止工作 (1次)</p>
                     </div>
 
                     <div class="product-card">
                         <h4>🔗 Cable</h4>
                         <div class="rating">★★★★☆ 4.22</div>
-                        <p>评论数: 76条 (15.2%)</p>
+                        <p>评论数: 76条 (15.2%) | 好评率: 76.3%</p>
                         <p><strong>表现:</strong> 中等</p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 耐用 (27次)<br>2. 速度快 (19次)<br>3. 质量优秀 (17次)</p>
+                        <p style="margin-top: 5px; color: #dc3545;"><strong>⚠️ 主要缺点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 停止工作 (2次)<br>2. 令人失望 (1次)</p>
                     </div>
 
                     <div class="product-card" style="border-color: #dc3545;">
                         <h4>🏠 Smart Home</h4>
                         <div class="rating" style="color: #dc3545;">★★★★☆ 3.93</div>
-                        <p>评论数: 69条 (13.8%)</p>
+                        <p>评论数: 69条 (13.8%) | 好评率: 72.5%</p>
                         <p><strong>表现:</strong> <span style="color: #dc3545;">需改进 ⚠️</span></p>
+                        <p style="margin-top: 10px; color: #28a745;"><strong>✅ 主要优点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 质量优秀 (21次)<br>2. 表现优异 (17次)<br>3. 卓越性能 (17次)</p>
+                        <p style="margin-top: 5px; color: #dc3545;"><strong>⚠️ 主要缺点:</strong></p>
+                        <p style="font-size: 0.9em; margin-left: 10px;">1. 速度慢 (3次)<br>2. 表现不佳 (1次)<br>3. 浪费 (1次)</p>
                     </div>
                 </div>
             </div>
@@ -459,36 +509,36 @@
                             <td>1</td>
                             <td>🇺🇸 美国</td>
                             <td>77条 (15.4%)</td>
-                            <td>-</td>
+                            <td>3.93★</td>
                             <td>核心市场</td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>🇬🇧 英国</td>
                             <td>39条 (7.8%)</td>
-                            <td>-</td>
+                            <td>4.20★</td>
                             <td>重要市场</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>🇩🇪 德国</td>
                             <td>38条 (7.6%)</td>
-                            <td>-</td>
+                            <td>4.12★</td>
                             <td>重要市场</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>🇯🇵 日本</td>
-                            <td>35条 (7.0%)</td>
-                            <td>4.39★</td>
-                            <td>量质兼优</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
                             <td>🇨🇦 加拿大</td>
                             <td>35条 (7.0%)</td>
                             <td>4.36★</td>
                             <td>重要市场</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>🇯🇵 日本</td>
+                            <td>35条 (7.0%)</td>
+                            <td>4.39★</td>
+                            <td>量质兼优</td>
                         </tr>
                     </tbody>
                 </table>
@@ -504,12 +554,17 @@
 
                 <div class="chart-container">
                     <h3>星级分布图</h3>
-                    <img src="rating_distribution.png" alt="星级分布图">
+                    <img src="rating_distribution_improved.png" alt="星级分布图">
                 </div>
 
                 <div class="chart-container">
-                    <h3>产品分析图</h3>
-                    <img src="product_analysis.png" alt="产品分析图">
+                    <h3>产品排名综合分析图</h3>
+                    <img src="product_ranking_summary.png" alt="产品排名综合分析图">
+                </div>
+
+                <div class="chart-container">
+                    <h3>所有产品详细优缺点对比图</h3>
+                    <img src="all_products_details.png" alt="所有产品详细优缺点对比图">
                 </div>
 
                 <div class="chart-container">
@@ -564,14 +619,19 @@
                             <td>演示、高管汇报</td>
                         </tr>
                         <tr>
-                            <td>rating_distribution.png</td>
+                            <td>rating_distribution_improved.png</td>
                             <td>星级分布图表</td>
                             <td>PPT、报告配图</td>
                         </tr>
                         <tr>
-                            <td>product_analysis.png</td>
-                            <td>产品对比图表</td>
-                            <td>产品会议、决策</td>
+                            <td>product_ranking_summary.png</td>
+                            <td>产品排名综合分析图</td>
+                            <td>产品会议、决策、高管汇报</td>
+                        </tr>
+                        <tr>
+                            <td>all_products_details.png</td>
+                            <td>所有产品详细优缺点对比图</td>
+                            <td>产品改进、研发参考</td>
                         </tr>
                         <tr>
                             <td>region_analysis.png</td>
